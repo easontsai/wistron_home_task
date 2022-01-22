@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import 'antd/dist/antd.css';
+import 'antd/dist/antd.min.css'
 import Header from './features/header/Header';
 import WeatherTable from './features/weatherTable/WeatherTable';
 

@@ -25,7 +25,10 @@ export const getPeriod = (data, idx, current) => {
   if (diffCurrentNEndAbs === 0) {
     //'今天'
     display = '今天';
-  } else if (diffCurrentNEndAbs === 1 && Math.abs(diffStartNEnd) === 1) {
+  } else if (diffCurrentNEndAbs === 1 && (moment(startTime).hours() === 18 && moment(endTime).hours() === 6)) {
+    //'今天'
+    display = '今天';
+  } else if (diffCurrentNEndAbs === 1 && (moment(startTime).hours() === 0 && moment(endTime).hours() === 6)) {
     //'今天'
     display = '今天';
   } else if (diffCurrentNEndAbs === 1) {

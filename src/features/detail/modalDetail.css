@@ -1,12 +1,16 @@
 .detail_container {
   display: flex;
   flex-direction: column;
-  padding: 3%;
+}
+
+.ant-modal-body {
+  padding: inherit;
 }
 
 .detail_info {
   display: flex;
   flex-direction: row;
+  padding: 0 5%;
 }
 
 .detail_location {
@@ -19,6 +23,7 @@
 
 .detail_record {
   display: flex;
+  align-items: center;
 }
 
 .detail_temp {
@@ -35,7 +40,6 @@
 }
 
 .detail_wind_rain {
-  padding-top: 15%;
   padding-left: 10%;
 }
 
@@ -57,6 +61,7 @@
 
 .detail_weather_overview {
   flex-grow: 3;
+  padding: 5%;
 }
 .detail_weather_status {
   display: flex;

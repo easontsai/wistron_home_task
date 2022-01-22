@@ -61,7 +61,6 @@ class ModalDetail extends React.Component {
     const targetForecast = prepareForecast(tirtySixHourForecast, city);
     const pop = getThirtySixWeatherelement(targetForecast.weatherElement, 'PoP');
     const targetSunset = prepareSunset(sunset, city);
-
     console.log('modalTarget', modalTarget);
     console.log('36', targetForecast);
     console.log(targetSunset);
@@ -71,7 +70,7 @@ class ModalDetail extends React.Component {
           footer={null}
           visible={modalDetail}
           onCancel={this.close}
-          width={800}
+          width={820}
           style={{ top: 20 }}>
           <div className="detail_container">
             <div className="detail_info">

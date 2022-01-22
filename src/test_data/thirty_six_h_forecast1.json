@@ -42,5 +42,27 @@
         }
       ]
     }
+  ],
+  "test3": [
+    {
+      "elementName": "PoP",
+      "time": [
+        {
+          "startTime": "2022-01-23 00:00:00",
+          "endTime": "2022-01-23 06:00:00",
+          "parameter": { "parameterName": "40", "parameterUnit": "百分比" }
+        },
+        {
+          "startTime": "2022-01-23 06:00:00",
+          "endTime": "2022-01-23 18:00:00",
+          "parameter": { "parameterName": "30", "parameterUnit": "百分比" }
+        },
+        {
+          "startTime": "2022-01-23 18:00:00",
+          "endTime": "2022-01-24 06:00:00",
+          "parameter": { "parameterName": "30", "parameterUnit": "百分比" }
+        }
+      ]
+    }
   ]
 }

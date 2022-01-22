@@ -6,6 +6,7 @@ import { getForecastAsync, setSelectedRowIdxs, setSelectedAllRowIdxs } from './W
 import { setModal } from '../detail/ModalDetailSlice';
 import { cityFilter } from '../../data';
 import ModalDetail from '../detail/ModalDetail';
+import './weatherTable.css'
 
 const columns = [
   {
@@ -81,7 +82,7 @@ class WeatherTable extends React.Component {
     }
   }
   isSelectAll = props => {
-      const { dispatch } = this.props;
+    const { dispatch } = this.props;
     dispatch(setSelectedAllRowIdxs(props));
   };
 
@@ -101,7 +102,7 @@ class WeatherTable extends React.Component {
   prepareColumn = cols => {
     const isChecked = index => {
       const ret = this.props.selectedRowIdxs?.find(idx => idx === index);
-      return ret !== undefined ? true : false
+      return ret !== undefined ? true : false;
     };
     const checkBox = [
       {
@@ -111,12 +112,15 @@ class WeatherTable extends React.Component {
           </Tooltip>
         ),
         dataIndex: '_checkbox_',
+        className: '_checkbox_',
         render: (text, record, index) => (
           <Tooltip title="輸出該筆資料至 csv">
-            <Checkbox
-              checked={isChecked(index)}
-              onChange={e => this.onSelectChange(e.target.checked, index)}
-            />
+            <div className='aaa'>
+              <Checkbox
+                checked={isChecked(index)}
+                onChange={e => this.onSelectChange(e.target.checked, index)}
+              />
+            </div>
           </Tooltip>
         ),
       },
@@ -132,7 +136,7 @@ class WeatherTable extends React.Component {
     const { location } = records;
     let ret = [];
     location.forEach((item, idx) => {
-      const { /*lat, location, lon,*/ parameter/*, stationId*/, time, weatherElement } = item;
+      const { /*lat, location, lon,*/ parameter /*, stationId*/, time, weatherElement } = item;
       ret.push({
         key: idx,
         city: getParameter(parameter, 'CITY'),

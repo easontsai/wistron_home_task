@@ -1,6 +1,5 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { Button } from 'antd';
 import { ReloadOutlined, ExportOutlined } from '@ant-design/icons';
 import { CSVLink } from 'react-csv';
 import { getForecastAsync } from '../weatherTable/WeatherTableSlice';
@@ -11,7 +10,7 @@ const formatData = data => {
   if (data.length === 0) return [];
   let ret = [];
   data.forEach((item, idx) => {
-    const { /*lat, location, lon,*/ parameter/*, stationId*/, time, weatherElement } = item;
+    const { /*lat, location, lon,*/ parameter /*, stationId*/, time, weatherElement } = item;
     ret.push({
       縣市: getParameter(parameter, 'CITY'),
       地區: getParameter(parameter, 'TOWN'),
@@ -54,14 +53,16 @@ class Header extends React.Component {
     return (
       <div className="_header_">
         <div className="header_title">即時天氣</div>
-        <div>
-          <Button className="header_btn" onClick={this.prepareCSV} icon={<ExportOutlined />}>
+        <div className="header_btn_container">
+          <div className="header_btn" onClick={this.prepareCSV}>
+            <ExportOutlined className="btn_icon" />
             Export
-          </Button>
+          </div>
           <CSVLink data={dataToDownload} ref={this.csvRef} />
-          <Button className="header_btn" onClick={this.refreshData} icon={<ReloadOutlined />}>
+          <div className="header_btn" onClick={this.refreshData}>
+            <ReloadOutlined className="btn_icon" />
             Reload
-          </Button>
+          </div>
         </div>
       </div>
     );

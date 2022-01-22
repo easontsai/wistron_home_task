@@ -13,5 +13,10 @@ describe('test ThirtySixHourForecast period', () => {
     expect(getPeriod(thirtySixHourTestData1.test2, 1, moment('2022-01-22 03:00:00'))).toBe('明天白天');
     expect(getPeriod(thirtySixHourTestData1.test2, 2, moment('2022-01-22 03:00:00'))).toBe('明天晚上');
   });
+  it('test3', () => {
+    expect(getPeriod(thirtySixHourTestData1.test3, 0, moment('2022-01-22 03:00:00'))).toBe('今天晚上');
+    expect(getPeriod(thirtySixHourTestData1.test3, 1, moment('2022-01-22 03:00:00'))).toBe('明天白天');
+    expect(getPeriod(thirtySixHourTestData1.test3, 2, moment('2022-01-22 03:00:00'))).toBe('明天晚上');
+  });
 });
  
