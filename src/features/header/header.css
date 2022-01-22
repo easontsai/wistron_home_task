@@ -1,0 +1,20 @@
+._header_{
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header_title {
+    font-size: 28px;
+    color: #67c6f0;
+}
+
+.header_btn{
+    height: 30px;
+    width: 100px;
+    margin: 5px;
+    background-color: #67c6f0;
+    color: #eeeeee;
+    border-radius: 15px;
+}

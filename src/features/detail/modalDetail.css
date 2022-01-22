@@ -1,0 +1,66 @@
+.detail_container {
+  display: flex;
+  flex-direction: column;
+  padding: 3%;
+}
+
+.detail_info {
+  display: flex;
+  flex-direction: row;
+}
+
+.detail_location {
+  font-size: 32px;
+}
+
+.detail_weather {
+  font-size: 24px;
+}
+
+.detail_record {
+  display: flex;
+}
+
+.detail_temp {
+  display: flex;
+}
+
+.detail_temp_1 {
+  font-size: 80px;
+}
+
+.detail_temp_2 {
+  font-size: 24px;
+  padding-top: 15px;
+}
+
+.detail_wind_rain {
+  padding-top: 15%;
+  padding-left: 10%;
+}
+
+.detail_wind_rain_1 {
+  font-size: 16px;
+  display: flex;
+}
+
+.detail_wind_rain_2 {
+  font-size: 16px;
+  display: flex;
+}
+
+.record_icon {
+  height: 30px;
+  width: 30px;
+  padding: 5px;
+}
+
+.detail_weather_overview {
+  flex-grow: 3;
+}
+.detail_weather_status {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 2;
+}
