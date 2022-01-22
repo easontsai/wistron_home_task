@@ -33,7 +33,6 @@ const getWeatherIcon = (isDay, weather) => {
 
 const computeWeatherIcon = props => {
   const { obsTime, sunset, weather } = props;
-  console.log('props', props);
   if (!sunset?.time) {
     return undefined;
   }
@@ -60,7 +59,6 @@ const computeWeatherIcon = props => {
 };
 
 const CurrentWeatherIcon = props => {
-  console.log(props);
   const weatherIcon = computeWeatherIcon(props);
   return <>{weatherIcon}</>;
 };

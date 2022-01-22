@@ -61,9 +61,9 @@ class ModalDetail extends React.Component {
     const targetForecast = prepareForecast(tirtySixHourForecast, city);
     const pop = getThirtySixWeatherelement(targetForecast.weatherElement, 'PoP');
     const targetSunset = prepareSunset(sunset, city);
-    console.log('modalTarget', modalTarget);
-    console.log('36', targetForecast);
-    console.log(targetSunset);
+    // console.log('modalTarget', modalTarget);
+    // console.log('36', targetForecast);
+    // console.log(targetSunset);
     return (
       <div>
         <Modal

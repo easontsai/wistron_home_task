@@ -43,14 +43,12 @@ export const getPeriod = (data, idx, current) => {
 };
 
 export const getParameter = (data, name, idx) => {
-  console.log(data);
   if (!data) return '';
   if (name === 'TIME') {
     const current = moment();
     return getPeriod(data, idx, current);
   } else {
     const ret = data.find(i => i.elementName === name);
-    // console.log('getParameter ', ret);
     return ret?.time[idx]?.parameter.parameterName;
   }
 };
@@ -67,6 +65,7 @@ const columns = [
   {
     title: '降雨機率',
     dataIndex: 'pop',
+    render: (text, record, index) => text+'%',
   },
   {
     title: '最低溫',
@@ -84,7 +83,6 @@ const columns = [
 
 class ThirtySixHourForecast extends React.Component {
   prepareData = forecast => {
-    console.log('dataaaa', forecast);
     if (!forecast?.weatherElement) return [];
     const { weatherElement } = forecast;
     let ret = [];
@@ -100,15 +98,11 @@ class ThirtySixHourForecast extends React.Component {
         weatherDesc: getParameter(weatherElement, 'CI', i),
       });
     }
-
-    console.log('prepare data : ', ret);
     return ret;
   };
 
   render() {
-    // const { data, modalTarget } = this.state;
     const { forecast } = this.props;
-    console.log('forecast', forecast);
     const dataSource = this.prepareData(forecast);
     return (
       <div>
