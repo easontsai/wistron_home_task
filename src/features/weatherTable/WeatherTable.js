@@ -44,6 +44,7 @@ const columns = [
   {
     title: '風速',
     dataIndex: 'wdsd',
+    render: (text, record, index) => text+'m/h',
   },
   {
     dataIndex: 'detail',
