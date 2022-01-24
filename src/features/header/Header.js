@@ -61,7 +61,7 @@ class Header extends React.Component {
           <CSVLink data={dataToDownload} ref={this.csvRef} />
           <div className="header_btn" onClick={this.refreshData}>
             <ReloadOutlined className="btn_icon" />
-            Reload
+            Refresh
           </div>
         </div>
       </div>
